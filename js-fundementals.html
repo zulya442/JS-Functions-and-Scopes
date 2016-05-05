@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap Boilerplate</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.c" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigi"anonymous">
+	<style>
+		/*Custom CSS here*/
+	</style>
+</head>
+<body>
+	<!-- Any HTML Goes Here -->
+		
+	<button id="theButton">Click Me</button>
+
+	<!-- Any HTML Ends Here -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+    	//This is in the GLOBAL scope
+    	var myVariable = 'Good Morning Vietnam';
+
+    	//Hoisting the function to be invoked
+    	//shoutIt();
+
+    	//**This is a function Declaration
+    	// function shoutIt (argument) {
+    	// 	alert(myVariable);
+    	// 	var localVariable = 'This is a Local Variable Message';
+    	// 	window.localVariable = localVariable; //**assigned to window lets us use the local scope outside the function.
+    	// };
+
+    	//* * Invoking the function declaration * *//
+    	// shoutIt();
+
+    	//**A Function Expression
+  //   	var newShoutIt = function(){
+  //   		alert(myVariable);
+  //   		alert(localVariable);
+		// }(); //**self-invoking () trigger
+
+    	//newShoutIt();
+
+    	var d = new Date();
+    	var n = d.getFullYear();
+    	
+    	var initDom = function(){
+    		var trigger = document.getElementById('theButton'); //jquery= $('#theID')
+    		trigger.addEventListener('click', dateFunction); //date function being triggered
+    	}();
+
+    	function dateFunction(){
+    		var d = new Date();
+    		var n = d.getFullYear();
+
+    		setTimeout(function(){ doThis() }, 3000);
+
+				function doThis (){
+    			alert(n);
+
+    		}
+    	};
+
+    	
+
+
+    </script>
+</body>
+</html>
